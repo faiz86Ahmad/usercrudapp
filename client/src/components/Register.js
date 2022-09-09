@@ -36,7 +36,7 @@ const Register = () => {
 
         const { name, email, role, plan, status} = inpval;
 
-        const res = await fetch("http://localhost:5000/users/register", {
+        const res = await fetch("https://usercrudmern.herokuapp.com/users/register", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

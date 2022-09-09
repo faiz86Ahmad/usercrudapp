@@ -7,8 +7,7 @@ import "../App.css"
 
 const Edit = () => {
 
-    // const [getuserdata, setUserdata] = useState([]);
-    // console.log(getuserdata);
+    
 
    const {updata, setUPdata} = useContext(updatedata)
 
@@ -42,7 +41,7 @@ const Edit = () => {
 
     const getdata = async () => {
 
-        const res = await fetch(`http://localhost:5000/users/getuser/${id}`, {
+        const res = await fetch(`https://usercrudmern.herokuapp.com/users/getuser/${id}`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json"
@@ -72,7 +71,7 @@ const Edit = () => {
 
         const {name,email,role,plan,status} = inpval;
 
-        const res2 = await fetch(`http://localhost:5000/users/updateuser/${id}`,{
+        const res2 = await fetch(`https://usercrudmern.herokuapp.com/users/updateuser/${id}`,{
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"
